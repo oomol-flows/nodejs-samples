@@ -1,0 +1,22 @@
+{
+  "nodes": {
+    "+typescript#1": {
+      "contentWidth": 450,
+      "rfNode": {
+        "position": {
+          "x": -12,
+          "y": 197
+        }
+      }
+    },
+    "+typescript#2": {
+      "contentWidth": 450,
+      "rfNode": {
+        "position": {
+          "x": 810,
+          "y": 225
+        }
+      }
+    }
+  }
+}

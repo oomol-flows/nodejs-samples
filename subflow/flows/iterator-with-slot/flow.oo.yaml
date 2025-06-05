@@ -1,0 +1,49 @@
+nodes:
+  - node_id: +value#1
+    title: "Value #1"
+    values:
+      - handle: value1
+        json_schema:
+          type: array
+          items:
+            type: number
+        value:
+          - 1
+          - 2
+          - 3
+  - node_id: +typescript#2
+    title: "TypeScript #2"
+    icon: ":skill-icons:typescript:"
+    task:
+      ui:
+        default_width: 450
+      inputs_def:
+        - handle: input
+          description: Input
+          json_schema:
+            {}
+      outputs_def:
+        - handle: output
+          description: Output
+          json_schema:
+            {}
+      executor:
+        name: nodejs
+        options:
+          entry: scriptlets/+scriptlet#4.ts
+    inputs_from:
+      - handle: input
+        from_node:
+          - node_id: iterator
+            output_handle: output
+  - node_id: iterator
+    inputs_from:
+      - handle: array
+        from_node:
+          - node_id: +value#1
+            output_handle: value1
+    subflow: self::iterate-with-slot
+    slots:
+      - slot_node_id: +slot#1
+        slotflow: self::+slotflow#1
+title: iterator-with-slot

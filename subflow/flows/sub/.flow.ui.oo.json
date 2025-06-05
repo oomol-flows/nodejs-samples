@@ -1,0 +1,35 @@
+{
+  "nodes": {
+    "basic-subflow": {
+      "rfNode": {
+        "position": {
+          "x": 867,
+          "y": 499
+        }
+      }
+    },
+    "+value#1": {
+      "contentWidth": 415,
+      "rfNode": {
+        "position": {
+          "x": 285,
+          "y": 360
+        }
+      }
+    },
+    "+javascript#1": {
+      "contentWidth": 450,
+      "rfNode": {
+        "position": {
+          "x": 1476,
+          "y": 534
+        }
+      },
+      "sections": {
+        "scriptlet": {
+          "cardCollapsed": true
+        }
+      }
+    }
+  }
+}

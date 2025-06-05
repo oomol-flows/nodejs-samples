@@ -1,0 +1,31 @@
+{
+  "nodes": {
+    "+typescript#1": {
+      "contentWidth": 450,
+      "rfNode": {
+        "position": {
+          "x": 495,
+          "y": -375
+        }
+      }
+    }
+  },
+  "pseudoNodes": {
+    "input": {
+      "rfNode": {
+        "position": {
+          "x": 0,
+          "y": -400
+        }
+      }
+    },
+    "output": {
+      "rfNode": {
+        "position": {
+          "x": 1035,
+          "y": -400
+        }
+      }
+    }
+  }
+}

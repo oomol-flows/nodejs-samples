@@ -1,0 +1,63 @@
+{
+  "nodes": {
+    "+typescript#1": {
+      "contentWidth": 450,
+      "rfNode": {
+        "position": {
+          "x": 486,
+          "y": 0
+        }
+      }
+    },
+    "+slot#1": {
+      "contentWidth": 415,
+      "rfNode": {
+        "position": {
+          "x": 1023.8477040816329,
+          "y": -113.0798469387755
+        }
+      }
+    },
+    "+typescript#2": {
+      "contentWidth": 450,
+      "rfNode": {
+        "position": {
+          "x": 1549.8831632653062,
+          "y": 80.3045918367347
+        }
+      }
+    },
+    "+javascript#1": {
+      "contentWidth": 450,
+      "rfNode": {
+        "position": {
+          "x": 988.8477040816329,
+          "y": 273.8158163265306
+        }
+      },
+      "sections": {
+        "scriptlet": {
+          "cardCollapsed": true
+        }
+      }
+    }
+  },
+  "pseudoNodes": {
+    "input": {
+      "rfNode": {
+        "position": {
+          "x": 0,
+          "y": 291.5
+        }
+      }
+    },
+    "output": {
+      "rfNode": {
+        "position": {
+          "x": 2034,
+          "y": 457
+        }
+      }
+    }
+  }
+}

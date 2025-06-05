@@ -1,0 +1,28 @@
+{
+  "nodes": {
+    "+typescript#1": {
+      "rfNode": {
+        "position": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    "+typescript#2": {
+      "rfNode": {
+        "position": {
+          "x": 622.8628518255707,
+          "y": 205.76566643013518
+        }
+      }
+    },
+    "+typescript#3": {
+      "rfNode": {
+        "position": {
+          "x": 1200,
+          "y": 0
+        }
+      }
+    }
+  }
+}

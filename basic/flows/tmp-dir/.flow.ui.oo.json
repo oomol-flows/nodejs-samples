@@ -1,0 +1,39 @@
+{
+  "nodes": {
+    "+javascript#1": {
+      "contentWidth": 614.8542719268603,
+      "rfNode": {
+        "position": {
+          "x": 0,
+          "y": 18
+        }
+      }
+    },
+    "+javascript#2": {
+      "rfNode": {
+        "position": {
+          "x": 875.416014761555,
+          "y": 18
+        }
+      }
+    },
+    "+javascript#3": {
+      "contentWidth": 450,
+      "rfNode": {
+        "position": {
+          "x": 92.85737339633505,
+          "y": 904
+        }
+      }
+    },
+    "+javascript#4": {
+      "contentWidth": 450,
+      "rfNode": {
+        "position": {
+          "x": 900,
+          "y": 1065
+        }
+      }
+    }
+  }
+}

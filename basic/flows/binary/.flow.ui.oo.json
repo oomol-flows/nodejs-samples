@@ -1,0 +1,22 @@
+{
+  "nodes": {
+    "+typescript#1": {
+      "contentWidth": 450,
+      "rfNode": {
+        "position": {
+          "x": -92.15755639210636,
+          "y": 54.950414545064156
+        }
+      }
+    },
+    "+javascript#1": {
+      "contentWidth": 450,
+      "rfNode": {
+        "position": {
+          "x": 676.5798944148318,
+          "y": 11.575695842410838
+        }
+      }
+    }
+  }
+}

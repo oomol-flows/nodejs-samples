@@ -1,0 +1,271 @@
+nodes:
+  - node_id: +typescript#1
+    title: "markdown"
+    icon: ":skill-icons:typescript:"
+    task:
+      ui:
+        default_width: 450
+      inputs_def:
+        []
+      outputs_def:
+        - handle: output
+          description: Output
+          json_schema:
+            {}
+      executor:
+        name: nodejs
+        options:
+          entry: scriptlets/+scriptlet#1.ts
+  - node_id: +typescript#2
+    title: "json"
+    icon: ":skill-icons:typescript:"
+    task:
+      ui:
+        default_width: 450
+      inputs_def:
+        - handle: input
+          description: Input
+          json_schema:
+            {}
+      outputs_def:
+        - handle: output
+          description: Output
+          json_schema:
+            {}
+      executor:
+        name: nodejs
+        options:
+          entry: scriptlets/+scriptlet#2.ts
+    inputs_from:
+      - handle: input
+        from_node:
+          - node_id: +typescript#1
+            output_handle: output
+  - node_id: +typescript#3
+    title: "text"
+    icon: ":skill-icons:typescript:"
+    task:
+      ui:
+        default_width: 450
+      inputs_def:
+        - handle: input
+          description: Input
+          json_schema:
+            {}
+      outputs_def:
+        - handle: output
+          description: Output
+          json_schema:
+            {}
+      executor:
+        name: nodejs
+        options:
+          entry: scriptlets/+scriptlet#3.ts
+    inputs_from:
+      - handle: input
+        from_node:
+          - node_id: +typescript#2
+            output_handle: output
+  - node_id: +typescript#4
+    node_type: task_node
+    title: "text-javascript"
+    icon: ":skill-icons:typescript:"
+    inputs_from:
+      - handle: input
+        from_node:
+          - node_id: +typescript#3
+            output_handle: output
+    task:
+      ui:
+        default_width: 450
+      inputs_def:
+        - handle: input
+          description: Input
+          json_schema:
+            {}
+      outputs_def:
+        - handle: output
+          description: Output
+          json_schema:
+            {}
+      executor:
+        name: nodejs
+        options:
+          entry: scriptlets/+scriptlet#4.ts
+          spawn: false
+  - node_id: +typescript#5
+    title: "image"
+    icon: ":skill-icons:typescript:"
+    task:
+      ui:
+        default_width: 450
+      inputs_def:
+        []
+      outputs_def:
+        - handle: output
+          description: Output
+          json_schema:
+            {}
+      executor:
+        name: nodejs
+        options:
+          entry: scriptlets/+scriptlet#5.ts
+  - node_id: +typescript#6
+    title: "images"
+    icon: ":skill-icons:typescript:"
+    task:
+      ui:
+        default_width: 450
+      inputs_def:
+        - handle: input
+          description: Input
+          json_schema:
+            {}
+      outputs_def:
+        - handle: output
+          description: Output
+          json_schema:
+            {}
+      executor:
+        name: nodejs
+        options:
+          entry: scriptlets/+scriptlet#6.ts
+    inputs_from:
+      - handle: input
+        from_node:
+          - node_id: +typescript#5
+            output_handle: output
+  - node_id: +typescript#7
+    title: "image-base64"
+    icon: ":skill-icons:typescript:"
+    task:
+      ui:
+        default_width: 450
+      inputs_def:
+        - handle: input
+          description: Input
+          json_schema:
+            {}
+      outputs_def:
+        - handle: output
+          description: Output
+          json_schema:
+            {}
+      executor:
+        name: nodejs
+        options:
+          entry: scriptlets/+scriptlet#7.ts
+    inputs_from:
+      - handle: input
+        from_node:
+          - node_id: +typescript#6
+            output_handle: output
+  - node_id: +typescript#8
+    node_type: task_node
+    title: "image-base64 #2"
+    icon: ":skill-icons:typescript:"
+    inputs_from:
+      - handle: input
+        from_node:
+          - node_id: +typescript#7
+            output_handle: output
+    task:
+      ui:
+        default_width: 450
+      inputs_def:
+        - handle: input
+          description: Input
+          json_schema:
+            {}
+      outputs_def:
+        - handle: output
+          description: Output
+          json_schema:
+            {}
+      executor:
+        name: nodejs
+        options:
+          entry: scriptlets/+scriptlet#8.ts
+          spawn: false
+  - node_id: +typescript#9
+    title: "audio"
+    icon: ":skill-icons:typescript:"
+    task:
+      ui:
+        default_width: 450
+      inputs_def:
+        []
+      outputs_def:
+        - handle: output
+          description: Output
+          json_schema:
+            {}
+      executor:
+        name: nodejs
+        options:
+          entry: scriptlets/+scriptlet#9.ts
+  - node_id: +typescript#10
+    node_type: task_node
+    title: "video"
+    icon: ":skill-icons:typescript:"
+    task:
+      ui:
+        default_width: 450
+      inputs_def:
+        - handle: output
+          json_schema:
+            {}
+          kind: primitive
+          nullable: false
+          description: Output
+      outputs_def:
+        - handle: output
+          description: Output
+          json_schema:
+            {}
+      executor:
+        name: nodejs
+        options:
+          entry: scriptlets/+scriptlet#10.ts
+          spawn: false
+    inputs_from:
+      - handle: output
+        from_node:
+          - node_id: +typescript#9
+            output_handle: output
+  - node_id: +typescript#11
+    node_type: task_node
+    title: "html"
+    icon: ":skill-icons:typescript:"
+    task:
+      ui:
+        default_width: 450
+      inputs_def:
+        []
+      outputs_def:
+        - handle: output
+          description: Output
+          json_schema:
+            {}
+      executor:
+        name: nodejs
+        options:
+          entry: scriptlets/+scriptlet#11.ts
+          spawn: false
+  - node_id: +typescript#12
+    title: "TypeScript #12"
+    icon: ":skill-icons:typescript:"
+    task:
+      ui:
+        default_width: 450
+      inputs_def:
+        []
+      outputs_def:
+        - handle: output
+          description: Output
+          json_schema:
+            {}
+      executor:
+        name: nodejs
+        options:
+          entry: scriptlets/+scriptlet#12.ts
