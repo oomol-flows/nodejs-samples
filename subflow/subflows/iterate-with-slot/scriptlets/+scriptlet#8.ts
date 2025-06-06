@@ -1,5 +1,5 @@
-//#region generated meta
 import type { Context } from "@oomol/types/oocana";
+//#region generated meta
 type Inputs = {
     item: any;
     length: number;

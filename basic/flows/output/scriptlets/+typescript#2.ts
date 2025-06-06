@@ -1,5 +1,5 @@
-//#region generated meta
 import type { Context } from "@oomol/types/oocana";
+//#region generated meta
 type Inputs = {
     input: string;
 };
@@ -12,8 +12,5 @@ export default async function(
     params: Inputs,
     context: Context<Inputs, Outputs>
 ): Promise<Outputs> {
-
-    // your code
-
     return { output: params.input };
 };

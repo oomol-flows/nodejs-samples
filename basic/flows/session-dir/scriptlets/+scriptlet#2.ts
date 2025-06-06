@@ -1,9 +1,9 @@
+import type { Context } from "@oomol/types/oocana";
 import { existsSync } from "node:fs";
 import { writeFile } from "node:fs/promises";
 import path from "node:path";
 
 //#region generated meta
-import type { Context } from "@oomol/types/oocana";
 type Inputs = {
     input: any;
 };

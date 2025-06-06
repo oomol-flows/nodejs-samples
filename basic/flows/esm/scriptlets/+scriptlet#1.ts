@@ -1,10 +1,11 @@
 import type { Context } from "@oomol/types/oocana";
+
 //#region generated meta
 type Inputs = {
-    input: string;
+    input: any;
 };
 type Outputs = {
-    output: string;
+    output: any;
 };
 //#endregion
 
@@ -13,5 +14,7 @@ export default async function(
     context: Context<Inputs, Outputs>
 ): Promise<Partial<Outputs> | undefined | void> {
 
-    return { output: params.input };
+    // your code
+
+    return { output: "output_value" };
 };

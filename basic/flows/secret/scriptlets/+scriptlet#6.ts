@@ -1,5 +1,5 @@
-//#region generated meta
 import type { Context } from "@oomol/types/oocana";
+//#region generated meta
 type Inputs = {
     input: string;
     object: { s: string; array: any[] };

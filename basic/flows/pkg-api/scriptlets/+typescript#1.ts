@@ -1,7 +1,7 @@
+import type { Context } from "@oomol/types/oocana";
 import fs from "fs/promises";
 import path from "node:path";
 //#region generated meta
-import type { Context } from "@oomol/types/oocana";
 type Inputs = {
     input: string;
 };

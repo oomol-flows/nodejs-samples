@@ -1,5 +1,7 @@
-//#region generated meta
 import type { Context } from "@oomol/types/oocana";
+import { existsSync } from "node:fs";
+import { writeFile } from "node:fs/promises";
+//#region generated meta
 type Inputs = {
 };
 type Outputs = {
