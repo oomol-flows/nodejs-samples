@@ -1,0 +1,79 @@
+inputs_def:
+  - handle: item
+    json_schema:
+      {}
+  - handle: count
+    json_schema:
+      type: number
+outputs_def:
+  - handle: output
+    json_schema:
+      type: array
+nodes:
+  - node_id: +typescript#1
+    title: "TypeScript #1"
+    icon: ":skill-icons:typescript:"
+    task:
+      ui:
+        default_width: 450
+      inputs_def:
+        - handle: item
+          description: Input
+          json_schema:
+            {}
+      outputs_def:
+        - handle: item
+          description: Output
+          json_schema:
+            {}
+      executor:
+        name: nodejs
+        options:
+          entry: scriptlets/+scriptlet#1.ts
+    inputs_from:
+      - handle: item
+        from_flow:
+          - input_handle: item
+  - node_id: +typescript#2
+    title: "TypeScript #2"
+    icon: ":skill-icons:typescript:"
+    task:
+      ui:
+        default_width: 450
+      inputs_def:
+        - handle: item
+          description: Output
+          json_schema:
+            {}
+          kind: primitive
+          nullable: false
+        - handle: count
+          json_schema:
+            type: number
+          kind: primitive
+          nullable: false
+      outputs_def:
+        - handle: array
+          description: Output
+          json_schema:
+            type: array
+      executor:
+        name: nodejs
+        options:
+          entry: scriptlets/+scriptlet#2.ts
+    inputs_from:
+      - handle: item
+        from_node:
+          - node_id: +typescript#1
+            output_handle: item
+      - handle: count
+        from_flow:
+          - input_handle: count
+        from_node:
+          []
+title: cache special count stack
+outputs_from:
+  - handle: output
+    from_node:
+      - node_id: +typescript#2
+        output_handle: array

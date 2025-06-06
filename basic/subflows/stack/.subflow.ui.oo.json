@@ -1,0 +1,45 @@
+{
+  "nodes": {
+    "+typescript#1": {
+      "contentWidth": 450,
+      "rfNode": {
+        "position": {
+          "x": 427.3540445486517,
+          "y": -1170.635477725674
+        }
+      }
+    },
+    "+typescript#2": {
+      "contentWidth": 825.640454276971,
+      "rfNode": {
+        "position": {
+          "x": 1027.0837111455037,
+          "y": -554.4917153249712
+        }
+      },
+      "sections": {
+        "scriptlet": {
+          "manualHeight": 715.2786694607884
+        }
+      }
+    }
+  },
+  "pseudoNodes": {
+    "input": {
+      "rfNode": {
+        "position": {
+          "x": -129,
+          "y": -497
+        }
+      }
+    },
+    "output": {
+      "rfNode": {
+        "position": {
+          "x": 1689,
+          "y": -425
+        }
+      }
+    }
+  }
+}
