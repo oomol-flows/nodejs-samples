@@ -16,8 +16,18 @@ nodes:
         name: nodejs
         options:
           entry: scriptlets/+scriptlet#1.ts
-  - node_id: end
-    title: "end"
+  - node_id: stack#1
+    title: "cache special count stack #1"
+    inputs_from:
+      - handle: item
+        from_node:
+          - node_id: +typescript#1
+            output_handle: output
+      - handle: count
+        value: 3
+    subflow: self::stack
+  - node_id: +typescript#2
+    title: "TypeScript #2"
     icon: ":skill-icons:typescript:"
     task:
       ui:
@@ -26,7 +36,7 @@ nodes:
         - handle: input
           description: Input
           json_schema:
-            {}
+            type: array
       outputs_def:
         - handle: output
           description: Output
@@ -39,5 +49,5 @@ nodes:
     inputs_from:
       - handle: input
         from_node:
-          - node_id: +typescript#1
+          - node_id: stack#1
             output_handle: output

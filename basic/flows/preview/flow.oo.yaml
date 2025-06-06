@@ -269,3 +269,58 @@ nodes:
         name: nodejs
         options:
           entry: scriptlets/+scriptlet#12.ts
+  - node_id: end
+    title: "end"
+    icon: ":skill-icons:typescript:"
+    task:
+      ui:
+        default_width: 450
+      inputs_def:
+        - handle: input
+          description: Input
+          json_schema:
+            {}
+        - handle: output
+          json_schema:
+            {}
+          kind: primitive
+          nullable: false
+          description: Output
+        - handle: input1
+          json_schema:
+            {}
+          kind: primitive
+          nullable: false
+          description: Output
+        - handle: input2
+          json_schema:
+            {}
+          kind: primitive
+          nullable: false
+          description: Output
+      outputs_def:
+        - handle: output
+          description: Output
+          json_schema:
+            {}
+      executor:
+        name: nodejs
+        options:
+          entry: scriptlets/+scriptlet#13.ts
+    inputs_from:
+      - handle: input
+        from_node:
+          - node_id: +typescript#10
+            output_handle: output
+      - handle: output
+        from_node:
+          - node_id: +typescript#11
+            output_handle: output
+      - handle: input1
+        from_node:
+          - node_id: +typescript#12
+            output_handle: output
+      - handle: input2
+        from_node:
+          - node_id: +typescript#8
+            output_handle: output

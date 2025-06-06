@@ -9,12 +9,21 @@
         }
       }
     },
-    "+javascript#2": {
+    "cjs": {
       "contentWidth": 450,
       "rfNode": {
         "position": {
-          "x": 420,
-          "y": 120
+          "x": 233,
+          "y": 128.81092902551438
+        }
+      }
+    },
+    "end": {
+      "contentWidth": 450,
+      "rfNode": {
+        "position": {
+          "x": 759.7545831147434,
+          "y": 142.81092902551438
         }
       }
     }

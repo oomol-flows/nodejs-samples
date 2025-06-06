@@ -39,9 +39,9 @@ nodes:
         name: nodejs
         options:
           entry: scriptlets/+typescript#2.ts
-    title: "TypeScript #2"
+    title: "end"
     icon: ":skill-icons:typescript:"
-    node_id: +typescript#2
+    node_id: end
     inputs_from:
       - handle: input
         from_node:

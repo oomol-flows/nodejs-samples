@@ -95,4 +95,109 @@ nodes:
         from_node:
           - node_id: +javascript#1
             output_handle: output
+  - node_id: stack#1
+    title: "cache special count stack #1"
+    inputs_from:
+      - handle: item
+        from_node:
+          - node_id: +typescript#2
+            output_handle: output
+      - handle: count
+        value: 3
+    subflow: self::stack
+  - node_id: stack#2
+    node_type: subflow_node
+    title: "cache special count stack #2"
+    inputs_from:
+      - handle: item
+        from_node:
+          - node_id: +javascript#2
+            output_handle: output
+      - handle: count
+        value: 3
+    subflow: self::stack
+  - node_id: end
+    title: "end"
+    icon: ":skill-icons:typescript:"
+    task:
+      ui:
+        default_width: 450
+      inputs_def:
+        - handle: number
+          description: Input
+          json_schema:
+            type: array
+        - handle: en
+          json_schema:
+            type: array
+          kind: primitive
+          nullable: false
+      outputs_def:
+        - handle: output
+          description: Output
+          json_schema:
+            {}
+      executor:
+        name: nodejs
+        options:
+          entry: scriptlets/+scriptlet#1.ts
+    inputs_from:
+      - handle: number
+        from_node:
+          - node_id: +typescript#3
+            output_handle: output
+      - handle: en
+        from_node:
+          - node_id: +typescript#4
+            output_handle: output
+  - node_id: +typescript#3
+    title: "TypeScript #3"
+    icon: ":skill-icons:typescript:"
+    task:
+      ui:
+        default_width: 450
+      inputs_def:
+        - handle: input
+          description: Input
+          json_schema:
+            type: array
+      outputs_def:
+        - handle: output
+          description: Output
+          json_schema:
+            type: array
+      executor:
+        name: nodejs
+        options:
+          entry: scriptlets/+scriptlet#2.ts
+    inputs_from:
+      - handle: input
+        from_node:
+          - node_id: stack#1
+            output_handle: output
+  - node_id: +typescript#4
+    title: "TypeScript #4"
+    icon: ":skill-icons:typescript:"
+    task:
+      ui:
+        default_width: 450
+      inputs_def:
+        - handle: input
+          description: Input
+          json_schema:
+            type: array
+      outputs_def:
+        - handle: output
+          description: Output
+          json_schema:
+            type: array
+      executor:
+        name: nodejs
+        options:
+          entry: scriptlets/+scriptlet#3.ts
+    inputs_from:
+      - handle: input
+        from_node:
+          - node_id: stack#2
+            output_handle: output
 title: output

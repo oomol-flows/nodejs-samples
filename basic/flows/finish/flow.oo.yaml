@@ -16,8 +16,8 @@ nodes:
         name: nodejs
         options:
           entry: scriptlets/+scriptlet#1.ts
-  - node_id: +typescript#2
-    title: "TypeScript #2"
+  - node_id: end
+    title: "end"
     icon: ":skill-icons:typescript:"
     task:
       ui:
