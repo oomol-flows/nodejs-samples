@@ -1,4 +1,3 @@
-import type { Context } from "@oomol/types/oocana";
 import { existsSync } from "node:fs";
 import { writeFile } from "node:fs/promises";
 import path from "node:path";
@@ -11,6 +10,7 @@ type Outputs = {
     output: any;
 };
 //#endregion
+import type { Context } from "@oomol/types/oocana";
 
 export default async function(
     params: Inputs,

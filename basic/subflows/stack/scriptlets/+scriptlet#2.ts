@@ -1,4 +1,3 @@
-import type { Context } from "@oomol/types/oocana";
 //#region generated meta
 type Inputs = {
     item: any;
@@ -8,6 +7,7 @@ type Outputs = {
     array: any[];
 };
 //#endregion
+import type { Context } from "@oomol/types/oocana";
 
 let store = {};
 

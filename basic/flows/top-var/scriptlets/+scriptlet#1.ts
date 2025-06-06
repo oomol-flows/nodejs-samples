@@ -1,4 +1,3 @@
-import type { Context } from "@oomol/types/oocana";
 //#region generated meta
 type Inputs = {
     value: any;
@@ -7,6 +6,7 @@ type Outputs = {
     output: any;
 };
 //#endregion
+import type { Context } from "@oomol/types/oocana";
 
 let a = 0;
 

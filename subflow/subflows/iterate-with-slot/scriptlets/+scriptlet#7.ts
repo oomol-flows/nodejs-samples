@@ -1,4 +1,3 @@
-import type { Context } from "@oomol/types/oocana";
 //#region generated meta
 type Inputs = {
     a: any[];
@@ -8,6 +7,7 @@ type Outputs = {
     length: number;
 };
 //#endregion
+import type { Context } from "@oomol/types/oocana";
 
 export default async function(
     params: Inputs,

@@ -1,4 +1,3 @@
-import type { Context } from "@oomol/types/oocana";
 import fs from "fs/promises";
 import path from "node:path";
 //#region generated meta
@@ -9,6 +8,7 @@ type Outputs = {
     output: string;
 };
 //#endregion
+import type { Context } from "@oomol/types/oocana";
 
 export default async function(
     params: Inputs,
