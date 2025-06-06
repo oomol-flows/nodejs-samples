@@ -47,8 +47,8 @@ nodes:
         from_node:
           - node_id: +typescript#1
             output_handle: output
-  - node_id: +javascript#1
-    title: "JavaScript #1"
+  - node_id: end
+    title: "end"
     icon: ":skill-icons:javascript:"
     task:
       ui:

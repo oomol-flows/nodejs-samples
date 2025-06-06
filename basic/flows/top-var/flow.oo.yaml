@@ -28,31 +28,6 @@ nodes:
             output_handle: output
           - node_id: +typescript#4
             output_handle: output
-  - node_id: +typescript#2
-    title: "TypeScript #2"
-    icon: ":skill-icons:typescript:"
-    task:
-      ui:
-        default_width: 450
-      inputs_def:
-        - handle: input
-          description: Input
-          json_schema:
-            {}
-      outputs_def:
-        - handle: output
-          description: Output
-          json_schema:
-            {}
-      executor:
-        name: nodejs
-        options:
-          entry: scriptlets/+scriptlet#2.ts
-    inputs_from:
-      - handle: input
-        from_node:
-          - node_id: +typescript#1
-            output_handle: output
   - node_id: +typescript#3
     title: "TypeScript #3"
     icon: ":skill-icons:typescript:"
@@ -87,3 +62,28 @@ nodes:
         name: nodejs
         options:
           entry: scriptlets/+scriptlet#4.ts
+  - node_id: end
+    title: "end"
+    icon: ":skill-icons:typescript:"
+    task:
+      ui:
+        default_width: 450
+      inputs_def:
+        - handle: input
+          description: Input
+          json_schema:
+            {}
+      outputs_def:
+        - handle: output
+          description: Output
+          json_schema:
+            {}
+      executor:
+        name: nodejs
+        options:
+          entry: scriptlets/+scriptlet#2.ts
+    inputs_from:
+      - handle: input
+        from_node:
+          - node_id: +typescript#1
+            output_handle: output

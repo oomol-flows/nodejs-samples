@@ -26,8 +26,8 @@ nodes:
       - handle: count
         value: 3
     subflow: self::stack
-  - node_id: +typescript#2
-    title: "TypeScript #2"
+  - node_id: end
+    title: "end"
     icon: ":skill-icons:typescript:"
     task:
       ui:
