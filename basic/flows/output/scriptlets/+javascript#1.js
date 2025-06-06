@@ -1,6 +1,5 @@
 //#region generated meta
 /**
- * @import { Context } from "@oomol/types/oocana";
  * @typedef {{
  *   input: string;
  * }} Inputs;
@@ -17,10 +16,10 @@
  */
 export default async function (params, context) {
 
-    context.output("output", "one");
+    context.output("output", "1");
     context.outputs({
-        "output": "two"
+        "output": "2"
     })
 
-    return { output: "three" };
+    return { output: "3" };
 }

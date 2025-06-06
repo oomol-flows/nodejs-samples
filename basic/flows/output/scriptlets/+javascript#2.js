@@ -1,6 +1,5 @@
 //#region generated meta
 /**
- * @import { Context } from "@oomol/types/oocana";
  * @typedef {{
  *   input: string;
  * }} Inputs;
@@ -17,7 +16,7 @@
  */
 export default async function (params, context) {
 
-    // your code
+    console.log("input:", params.input)
 
-    return { output: context.input };
+    return { output: params.input };
 }

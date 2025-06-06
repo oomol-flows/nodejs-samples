@@ -1,6 +1,5 @@
 //#region generated meta
 /**
- * @import { Context } from "@oomol/types/oocana";
  * @typedef {{
  *   vvvv: string;
  *   input: string;
